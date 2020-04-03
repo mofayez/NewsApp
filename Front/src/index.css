@@ -1,0 +1,64 @@
+html{
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* background: url(/img/news-back.jpg) no-repeat; */
+  background-size: 100%;
+  background-position: bottom;
+  background-color: #001f3f;
+  min-height: 100%;
+}
+
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+
+form button, form h5{
+  margin: 20px 0;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color: #ec407a;
+  box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ec407a !important;
+}
+
+.limit-text {
+    white-space: nowrap; 
+    width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.card-image:hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);  
+}
+
+.card-title a {
+  color: #ffffff;
+}
+
+.card-content {
+  min-height: 110px;
+  max-height: 110px;
+}
+
+.mng-sources {
+  color: #ffffff;
+  font-size: 3rem;
+}
