@@ -1,7 +1,8 @@
 import axios from 'axios';
+import appConfig from '../config/app';
 
 export const getEveryThing = async (id, page = null) => {
-    return await axios.get(`http://localhost:4000/news?id=${id}&page=${page}`, {
+    return await axios.get(`${appConfig.SERVER_HOST}:${appConfig.SERVER_PORT}/news?id=${id}&page=${page}`, {
         headers: {
             "Authorization": `Bearer ${JSON.parse(localStorage.getItem("authToken"))}`
         }
@@ -9,7 +10,7 @@ export const getEveryThing = async (id, page = null) => {
 }
 
 export const getSources = async (id, page = null) => {
-    return await axios.get(`http://localhost:4000/news/sources?id=${id}`, {
+    return await axios.get(`${appConfig.SERVER_HOST}:${appConfig.SERVER_PORT}/news/sources?id=${id}`, {
         headers: {
             "Authorization": `Bearer ${JSON.parse(localStorage.getItem("authToken"))}`
         }
@@ -17,7 +18,7 @@ export const getSources = async (id, page = null) => {
 }
 
 export const attachSource = async (id, source, attach) => {
-    return await axios.put(`http://localhost:4000/users/attach-source`, {
+    return await axios.put(`${appConfig.SERVER_HOST}:${appConfig.SERVER_PORT}/users/attach-source`, {
         id, source, attach
     }, {
         headers: {
